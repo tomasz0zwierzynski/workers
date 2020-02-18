@@ -1,0 +1,36 @@
+﻿@model WorkersApp.Models.Salary
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<h2>Szczegóły</h2>
+
+<div>
+    <h4>Wypłaty</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bonus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bonus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Position.PositionID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SalaryID">Edytuj</a> |
+    <a asp-action="Index">Powrót do listy</a>
+</div>

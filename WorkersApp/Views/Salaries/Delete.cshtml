@@ -1,0 +1,39 @@
+﻿@model WorkersApp.Models.Salary
+
+@{
+    ViewData["Title"] = "Usuń";
+}
+
+<h2>Usuń</h2>
+
+<h3>Jesteś pewny, że chcesz usunąć rekord?</h3>
+<div>
+    <h4>Wypłata</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bonus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bonus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Worker)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Worker.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Position.PositionID)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="SalaryID" />
+        <input type="submit" value="Usuń" class="btn btn-default" /> |
+        <a asp-action="Index">Powrót do listy</a>
+    </form>
+</div>
