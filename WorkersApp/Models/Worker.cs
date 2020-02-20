@@ -21,6 +21,9 @@ namespace WorkersApp.Models
         [DataType(DataType.Date)]
         public DateTime Birthday { get; set; }
 
+        [Display(Name = "Adres Email")]
+        public string Email { get; set; }
+
         public ICollection<Salary> Salaries { get; set; }
     }
 }

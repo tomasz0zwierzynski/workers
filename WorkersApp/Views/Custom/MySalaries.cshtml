@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "MySalaries";
+
+    var username = ViewData["UserName"];
+    var salaries = ViewData["ViewModel"] as List<SalaryViewModel>;
+    var total = ViewData["Total"];
+}
+
+<h2>Moje Wypłaty: @username</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Identyfikator wypłaty
+            </th>
+            <th>
+                Nazwa stanowiska
+            </th>
+            <th>
+                Wypłata podstawowa
+            </th>
+            <th>
+                Bonus
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in salaries)
+        {
+        <tr>
+            <td>
+                @item.SalaryID
+            </td>
+            <td>
+                @item.PositionName
+            </td>
+            <td>
+                @item.PositionAmount
+            </td>
+            <td>
+                @item.Bonus
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<h3>W sumie @total</h3>

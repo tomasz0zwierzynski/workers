@@ -76,7 +76,7 @@ Write(ViewData["Title"]);
             WriteLiteral("</h2>\r\n<p>\r\n    Twoje hasło zostało zmienione. ");
             EndContext();
             BeginContext(176, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "09cb2c71f38349cd92aa0ce3d23e3f6d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80b011043c6e4772ad7241a33d6e8089", async() => {
                 BeginContext(198, 11, true);
                 WriteLiteral("Zaloguj się");
                 EndContext();
